@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'partials/variables';
+@import 'partials/icons';
+
+body {
+    color: $primary;
+}
+
+header {
+    @apply flex justify-between bg-gray-200 p-4 pb-10;
+}
