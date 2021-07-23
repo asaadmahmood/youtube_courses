@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Creating Figma Page</title>
+    <link rel="stylesheet"
+          href="css/styles.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <script src="https://kit.fontawesome.com/e02eec018e.js"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="border-b border-gray-200 h-20 px-4 xl:px-6 text-sm flex items-center font-medium justify-between">
+        <div class="flex items-center space-x-2 lg:space-x-6">
+            <button class="header-icon-button lg:hidden"><i class="far fa-bars"></i></button>
+            <a href="#"><img src="img/dribbble-logo.svg"
+                alt="Dribbble Logo"></a>
+            <div class="hidden lg:flex space-x-6">
+                <a href="#">Inspiration</a>
+                <a href="#">Find Work</a>
+                <a href="#">Learn</a>
+                <a href="#">Hire Designers</a>
+            </div>
+        </div>
+        <div class="flex md:space-x-2">
+            <button class="header-icon-button hidden sm:block xl:hidden"><i class="far fa-search"></i></button>
+            <div class="hidden xl:block relative">
+                <div class="absolute left-0 top-0 h-full w-10 flex items-center justify-center"><i class="far fa-search text-gray-500"></i></div>
+                <input type="text" class="pl-8 w-full h-10 border border-gray-300 rounded-lg" placeholder="Search">
+            </div>
+            <button class="header-icon-button"><i class="fas fa-briefcase"></i></button>
+            <button class="header-icon-button"><i class="far fa-envelope"></i></button>
+            <button class="header-icon-button"><i class="far fa-chart-line"></i></button>
+            <img src="img/user.jpeg"
+                 class="w-10 h-10 rounded-full hidden md:block">
+            <div class="hidden md:block">
+                <button class="h-10 px-4 bg-pink-500 rounded-lg text-white ml-6">Upload</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="px-6 lg:px-16">
+        <nav class="text-sm flex justify-between py-4 lg:py-10 flex-wrap">
+            <button class="order-1 space-x-2 h-10 px-4 border border-gray-200 rounded-lg"><span>Upload</span><i
+                   class="far fa-angle-down"></i></button>
+            <div class="order-3 w-full lg:w-4/6 flex justify-start mt-4 pt-2 border-t border-gray-200 lg:border-none lg:pt-0 lg:m-0 overflow-hidden items-stretch">
+                <button class="flex items-center md:hidden lg:flex xl:hidden">
+                    <i class="far fa-angle-left text-lg"></i>
+                </button>
+                <div class="flex flex-1 overflow-hidden mx-4">
+                    <ul class="navigation-tags flex">
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">Animation</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Illustration</a></li>
+                        <li><a href="#">Mobile</a></li>
+                        <li><a href="#">Print</a></li>
+                        <li><a href="#">Product Design</a></li>
+                        <li><a href="#">Typography</a></li>
+                        <li><a href="#">Web Design</a></li>
+                    </ul>
+                </div>
+                <button class="flex items-center md:hidden lg:flex xl:hidden">
+                    <i class="far fa-angle-right text-lg"></i>
+                </button>
+            </div>
+            <button class="order-2 lg:order-4 space-x-2 h-10 px-4 border border-gray-200 rounded-lg">
+                <i class="far fa-filter"></i>
+                <span>Filters</span>
+            </button>
+        </nav>
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10">
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/7258247/screenshots/16086420/media/6ff4bf2d2a1975bfb39fa4900ec4336f.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/7258247/avatars/mini/551825a9c3f8de1fcdab188d94af4c30.png?1620728571"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Mahrukh Parvez</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/257940/screenshots/15583400/media/8d350feb56040e1612fb81ba6ea82878.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/257940/avatars/normal/7c9fbf3eced577a204ba838eeee57d7c.jpg?1528360957"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Asaad Mahmood</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/7258247/screenshots/15929844/media/01e44766c9812a00c4934ea970900e13.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/7258247/avatars/mini/551825a9c3f8de1fcdab188d94af4c30.png?1620728571"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Mahrukh Parvez</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/257940/screenshots/15376636/media/f9a7bfe560f60162bf9c609a5e489827.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/257940/avatars/normal/7c9fbf3eced577a204ba838eeee57d7c.jpg?1528360957"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Asaad Mahmood</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/7258247/screenshots/15862268/media/7321c1d02549ed7eef0b933ee0ab0109.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/7258247/avatars/mini/551825a9c3f8de1fcdab188d94af4c30.png?1620728571"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Mahrukh Parvez</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/257940/screenshots/15308332/media/73b13b367adb6ea54b582b798d40b8cd.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/257940/avatars/normal/7c9fbf3eced577a204ba838eeee57d7c.jpg?1528360957"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Asaad Mahmood</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/7258247/screenshots/16086420/media/6ff4bf2d2a1975bfb39fa4900ec4336f.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/7258247/avatars/mini/551825a9c3f8de1fcdab188d94af4c30.png?1620728571"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Mahrukh Parvez</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/257940/screenshots/15583400/media/8d350feb56040e1612fb81ba6ea82878.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/257940/avatars/normal/7c9fbf3eced577a204ba838eeee57d7c.jpg?1528360957"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Asaad Mahmood</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/7258247/screenshots/15929844/media/01e44766c9812a00c4934ea970900e13.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/7258247/avatars/mini/551825a9c3f8de1fcdab188d94af4c30.png?1620728571"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Mahrukh Parvez</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/257940/screenshots/15376636/media/f9a7bfe560f60162bf9c609a5e489827.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/257940/avatars/normal/7c9fbf3eced577a204ba838eeee57d7c.jpg?1528360957"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Asaad Mahmood</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/7258247/screenshots/15862268/media/7321c1d02549ed7eef0b933ee0ab0109.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/7258247/avatars/mini/551825a9c3f8de1fcdab188d94af4c30.png?1620728571"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Mahrukh Parvez</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/257940/screenshots/15308332/media/73b13b367adb6ea54b582b798d40b8cd.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/257940/avatars/normal/7c9fbf3eced577a204ba838eeee57d7c.jpg?1528360957"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Asaad Mahmood</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/7258247/screenshots/16086420/media/6ff4bf2d2a1975bfb39fa4900ec4336f.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/7258247/avatars/mini/551825a9c3f8de1fcdab188d94af4c30.png?1620728571"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Mahrukh Parvez</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/257940/screenshots/15583400/media/8d350feb56040e1612fb81ba6ea82878.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/257940/avatars/normal/7c9fbf3eced577a204ba838eeee57d7c.jpg?1528360957"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Asaad Mahmood</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/7258247/screenshots/15929844/media/01e44766c9812a00c4934ea970900e13.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/7258247/avatars/mini/551825a9c3f8de1fcdab188d94af4c30.png?1620728571"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Mahrukh Parvez</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/257940/screenshots/15376636/media/f9a7bfe560f60162bf9c609a5e489827.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/257940/avatars/normal/7c9fbf3eced577a204ba838eeee57d7c.jpg?1528360957"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Asaad Mahmood</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/7258247/screenshots/15862268/media/7321c1d02549ed7eef0b933ee0ab0109.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/7258247/avatars/mini/551825a9c3f8de1fcdab188d94af4c30.png?1620728571"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Mahrukh Parvez</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.dribbble.com/users/257940/screenshots/15308332/media/73b13b367adb6ea54b582b798d40b8cd.png?compress=1&resize=1600x1200"
+                     alt="Dribbble Image"
+                     class="rounded-xl">
+                <div class="flex justify-between text-sm mt-3">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://cdn.dribbble.com/users/257940/avatars/normal/7c9fbf3eced577a204ba838eeee57d7c.jpg?1528360957"
+                             alt=""
+                             class="w-6 h-6 rounded-full">
+                        <div class="font-bold">Asaad Mahmood</div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <button><i class="fas fa-heart text-red-500"></i> 24</button>
+                        <button><i class="far fa-eye"></i> 1.4k</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

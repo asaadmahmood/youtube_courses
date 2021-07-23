@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="relative">
     <header>
         <div class="left-content">
             Left Content
@@ -18,9 +18,20 @@
             Right Content
         </div>
     </header>
-    <div class="h-52 bg-gray-100">
-        <div class="bg-gray-400 w-10 h-10"></div>
+
+    <div class="bg-gray-100 mt-32 relative">
+        <div class="">This is some text</div>
+        <div class="">This is some text</div>
+        <div class="">This is some text</div>
+        <div class="">This is some text</div>
+        <div class="">This is some text</div>
+        <div class="bg-green-500 w-20 h-32 text-white text-center relative">Box</div>
     </div>
+
+    <div class="text-3xl mt-20">Position fixed positions the element relative to the screen you see in front of you</div>
+    <div class="text-3xl mt-20">Position absolute positions the element relative to the first relative/absolute/fixed parent it finds</div>
+    <div class="text-3xl mt-20">Position relative does not do much, but if you use it top/left/right/bottom properties with it, it visually changes their position with resepct that to the value you've given</div>
+
 </body>
 
 </html>

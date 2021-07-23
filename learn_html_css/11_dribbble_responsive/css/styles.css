@@ -29839,13 +29839,40 @@ video {
   width: 80px;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
+.header-icon-button {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.25rem;
+}
+
+.header-icon-button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+
+.header-icon-button {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
+
+.navigation-tags a {
+  display: inline-flex;
+  height: 2.5rem;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 0.375rem;
+}
+
+.navigation-tags a:hover {
   --tw-bg-opacity: 1;
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
-  padding: 1rem;
-  padding-bottom: 2.5rem;
+}
+
+.navigation-tags a {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 @media (min-width: 640px) {
