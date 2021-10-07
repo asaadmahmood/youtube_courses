@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'partials/variables';
+@import 'partials/icons';
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: green;
+    margin: 40px;
+    animation: sliding 3s ease-in 2s infinite alternate;
+}
+
+@keyframes sliding {
+    0% {
+        background-color: green;
+        transform: translateX(0px);
+    }
+    100% {
+        background-color: purple;
+        transform: translateX(300px) rotateZ(360deg);
+    }
+}
+
+

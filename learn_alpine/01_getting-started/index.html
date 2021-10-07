@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Getting started with Alpine</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+
+
+<body class="p-20 bg-gray-100" x-data="{ count: 0, message: 'I ❤️ Alpine' }">
+
+    <h1 class="text-5xl" x-text="message"></h1>
+
+    <button class="bg-blue-600 px-2 py-5" x-on:click="count++">Increment</button>
+
+    <div >
+        <span x-text="count"></span>
+    </div>
+
+
+
+
+</body>
+
+</html>

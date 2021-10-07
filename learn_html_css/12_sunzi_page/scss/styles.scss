@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'partials/variables';
+@import 'partials/icons';
+
+// Layouts
+@import 'partials/header';
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: radial-gradient(50.63% 50.63% at 69.1% 49.37%, #372D2D 0%, #1E1A1A 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1140px;
+}
+
+.intro-section {
+    h1 {
+        font-size: 80px;
+        @apply font-semibold leading-tight;
+    }
+}

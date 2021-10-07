@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'partials/variables';
+@import 'partials/icons';
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: green;
+    margin: 40px;
+    transition: all 1s ease-in;
+
+    &:hover {
+        transform: translateX(100px);
+        background-color: yellow;
+        width: 500px;
+    }
+}
+
+button {
+    background: #333;
+    padding: 12px 24px;
+    margin: 20px;
+    border-radius: 4px;
+    color: white;
+    transition: all 0.4s ease-in;
+
+    &:hover {
+        box-shadow: 0 0 12px rgba(0,0,0, 0.6);
+    }
+
+    &:active {
+        background-color: #000;
+    }
+}

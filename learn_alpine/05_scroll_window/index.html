@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Scroll Window</title>
+    <link
+        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+        rel="stylesheet"
+    >
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <script
+        defer
+        src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+</head>
+
+
+<body
+    class="p-20 bg-gray-100"
+    x-data="{
+        fixedCircle: false,
+        scrollNumber: 0,
+        stopPoint: $refs.stop.offsetTop,
+        startPoint: $refs.start.offsetTop
+    }"
+    @scroll.window="
+        scrollNumber = window.pageYOffset,
+        stopPoint = $refs.stop.offsetTop,
+        fixedCircle = (scrollNumber > startPoint && scrollNumber < stopPoint) ? true : false,
+        (scrollNumber > stopPoint) ? ($refs.circle.style.transform = `translateY(${stopPoint - startPoint}px)`) : ($refs.circle.style.transform = `translateY(0px)`)
+    "
+>
+
+<h1 class="text-center text-5xl font-bold">Scrolling Example</h1>
+
+    <div class="flex justify-between mt-52">
+        <div class="h-52 w-52 bg-gray-200"></div>
+        <div class="h-52 w-52 bg-gray-200"></div>
+    </div>
+
+    <div class="flex justify-center" x-ref="start">
+        <div
+            x-ref="circle"
+            class="w-52 h-52 bg-blue-500 rounded-full flex flex-col items-center justify-center text-white"
+            :class="fixedCircle ? 'fixed top-0' : 'absolute' "
+        >
+            Circle
+            <div x-text="scrollNumber"></div>
+            <div x-text="stopPoint"></div>
+        </div>
+    </div>
+
+    <div class="flex justify-between mt-52">
+        <div class="h-52 w-52 bg-gray-200"></div>
+        <div class="h-52 w-52 bg-gray-200"></div>
+    </div>
+
+
+    <div class="flex justify-between mt-52">
+        <div class="h-52 w-52 bg-gray-200"></div>
+        <div class="h-52 w-52 bg-gray-200"></div>
+    </div>
+
+    <div class="flex justify-between mt-52">
+        <div class="h-52 w-52 bg-gray-200"></div>
+        <div class="h-52 w-52 bg-gray-200"></div>
+    </div>
+
+    <div class="flex justify-between mt-52">
+        <div class="h-52 w-52 bg-gray-200"></div>
+        <div class="h-52 w-52 bg-gray-200"></div>
+    </div>
+
+    <div
+        class="flex justify-between mt-52"
+        x-ref="stop"
+    >
+        <div class="h-52 w-52 bg-red-400"></div>
+        <div class="h-52 w-52 bg-red-400"></div>
+    </div>
+
+    <div class="flex justify-between mt-52">
+        <div class="h-52 w-52 bg-gray-200"></div>
+        <div class="h-52 w-52 bg-gray-200"></div>
+    </div>
+
+    <div class="flex justify-between mt-52">
+        <div class="h-52 w-52 bg-gray-200"></div>
+        <div class="h-52 w-52 bg-gray-200"></div>
+    </div>
+
+    <div class="flex justify-between mt-52">
+        <div class="h-52 w-52 bg-gray-200"></div>
+        <div class="h-52 w-52 bg-gray-200"></div>
+    </div>
+
+
+
+
+</body>
+
+</html>

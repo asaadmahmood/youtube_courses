@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Building a Dropdown</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+
+
+<body class="p-20 bg-gray-100" x-data="{open: false}">
+
+
+    <button class="bg-blue-600 px-5 py-2 text-white rounded" x-on:click="open = !open">Toggle Dropdown</button>
+
+    <div x-show="open" class="border border-gray-300 p-4 mt-4 shadow-xl" @click.outside="open = false">
+        <div>Dropdown Item 1</div>
+        <div>Dropdown Item 2</div>
+        <div>Dropdown Item 3</div>
+        <div>Dropdown Item 4</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'partials/variables';
+@import 'partials/icons';
+
+#wheel_front,
+#wheel_back {
+    animation: rotate 1s linear infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#cloud_right {
+    animation: cloudRight 9s linear infinite;
+}
+
+@keyframes cloudRight {
+    0% {
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(-400px);
+    }
+}
+
+#cloud_left {
+    animation: cloudLeft 9s linear -4s infinite;
+}
+
+@keyframes cloudLeft {
+    0% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(-200px);
+    }
+}
+
+#left_hand {
+    animation: leftHand 1s linear infinite alternate;
+}
+
+@keyframes leftHand {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(6px);
+    }
+}
+
+#sea {
+    animation: sea 3s linear infinite alternate;
+}
+
+@keyframes sea {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+#plant_2 {
+    animation: plantRotate 1s ease-in-out infinite alternate;
+    transform-box: fill-box;
+    transform-origin: bottom left;
+}
+
+#plant_3 {
+    animation: plantRotate 1s ease-in-out infinite alternate;
+    transform-box: fill-box;
+    transform-origin: bottom left;
+}
+
+@keyframes plantRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+#plant_1 {
+    animation: plantRotate 1s ease-in-out infinite alternate;
+    transform-box: fill-box;
+    transform-origin: bottom right;
+}
