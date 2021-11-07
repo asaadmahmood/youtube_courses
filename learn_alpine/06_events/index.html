@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Events</title>
+    <!-- <link
+        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+        rel="stylesheet"
+    > -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <script
+        defer
+        src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+</head>
+
+
+<body>
+
+
+<div x-data>
+    <div>Default for events</div>
+    <button x-on:click="console.log('Button clicked')">Click me!</button>
+    <input x-on:keypress="console.log('Keypress event')" placeholder="Keypress Event">
+
+    <br>
+    <br>
+
+    <div>Shorthand for events</div>
+    <button @click="console.log('Button clicked')">Click me!</button>
+    <input @keyup.enter="console.log('Keypress event on Enter')" placeholder="Keypress Event">
+
+    <br>
+    <br>
+
+    <button @click="console.log($event.target.remove())">Click me!</button>
+
+    <br>
+    <br>
+
+    <div>Dispatch and Listen to events</div>
+    <button @click="$dispatch('foo')">Click me!</button>
+    <div @foo.window="console.log('Foo event catched')"></div>
+
+
+</div>
+
+
+
+
+</body>
+
+</html>

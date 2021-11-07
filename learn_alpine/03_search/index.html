@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Building a Dropdown</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+
+
+<body class="p-20 bg-gray-100" x-data="{
+    search: '',
+    items: ['apple', 'banana', 'mango', 'cherry', 'baba'],
+    get filteredItems() {
+        return this.items.filter(
+            item => item.startsWith(this.search)
+        )
+    }
+}">
+
+    <h1 class="text-5xl">Build a search</h1>
+
+    <div>
+        <input class="py-2 border border-gray-300 rounded mt-10 px-4" x-model="search">
+    </div>
+
+    <ul class="w-52 shadow rounded mt-2 bg-white">
+        <template x-for="item in filteredItems">
+            <li class="p-2 border-t border-gray-200" x-text="item"></li>
+        </template>
+    </ul>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Ref and Scroll</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+
+
+<body class="p-20 bg-gray-100" x-data="{headerFixed: false}"
+    @scroll.window="headerFixed = (window.pageYOffset > 100) ? true : false, console.log(headerFixed)"
+>
+
+    <div
+        class='bg-green-400 text-white h-10 flex items-center'
+        :class="headerFixed ? 'fixed top-0 w-full left-0' : 'relative' "
+    >
+        This is my header
+    </div>
+
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+    <h1 class="text-5xl">Refs and Scroll</h1>
+
+    <div x-ref="myText">I want this text removed</div>
+
+    <button class="bg-blue-500 text-white py-2 px-4" @click="$refs.myText.remove()">Click me!</button>
+
+
+</div>
+
+</body>
+
+</html>
