@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Events</title>
+    <!-- <link
+        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+        rel="stylesheet"
+    > -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <script
+        defer
+        src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+
+<body>
+
+
+<div x-data="{name: 'Asaad Mahmood', covidStatus: 'Negative', modal: false }" x-effect="console.log(covidStatus)">
+
+    <!-- X-Cloak -->
+    <template x-teleport='.modalContainer'>
+        <div style='width: 200px; height: 200px; background: black; margin-top: 50px;' x-cloak></div>
+    </template>
+
+    <div x-text='name'></div>
+    <div x-ignore x-text='covidStatus'></div>
+    <button @click='covidStatus = "Positive"'>Get Covid</button>
+</div>
+
+<div class="modalContainer"></div>
+
+
+</body>
+
+</html>
