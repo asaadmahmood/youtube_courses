@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Events</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <!-- Alpine Plugins -->
+    <script
+        defer
+        src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- Alpine Core -->
+    <script
+        defer
+        src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+</head>
+
+
+<body x-data='{white: true, activeSection: 1}'>
+    <div class='fixed flex flex-col justify-center h-screen space-y-4 px-10'>
+        <div
+        class='w-3 h-3 rounded-full border-2'
+        :class="{'border-black' : white, 'bg-black' : activeSection == 1}"
+        ></div>
+        <div
+            class='w-3 h-3 rounded-full border-2'
+            :class="{'border-black' : white, 'bg-white' : activeSection == 2}"
+        ></div>
+        <div
+            class='w-3 h-3 rounded-full border-2'
+            :class="{'border-black' : white, 'bg-white' : activeSection == 3}"
+        ></div>
+    </div>
+    <div class='sections'>
+        <div
+            x-intersect.half='white = true, activeSection = 1'
+            class='h-screen flex items-center justify-center text-5xl font-bold'
+            style='background-image: url("https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2676&q=80");'>
+            Reach new heights
+        </div>
+        <div
+            x-intersect.half='white = false, activeSection = 2'
+            class='h-screen flex items-center justify-center text-5xl font-bold text-white'
+            style='background-image: url("https://images.unsplash.com/photo-1612534526511-dd27833d6e50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80");'>
+            Even if you have to go under
+        </div>
+        <div
+            x-intersect.half='white = false, activeSection = 3'
+            class='h-screen flex items-center justify-center text-5xl font-bold text-white'
+            style='background-image: url("https://images.unsplash.com/photo-1514923995763-768e52f5af87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80");'>
+            Even if you have to go under
+        </div>
+    </div>
+</body>
+
+</html>

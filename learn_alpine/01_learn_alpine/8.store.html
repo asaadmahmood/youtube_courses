@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Events</title>
+    <!-- <link
+        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+        rel="stylesheet"
+    > -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <script
+        defer
+        src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+</head>
+
+
+<body x-data>
+
+    <button class="bg-blue-600 text-white px-4 py-2" @click='$store.darkMode.toggle()' :class='$store.darkMode.on && "bg-purple-800"'>Toggle Dark Mode</button>
+
+    <div x-init="$watch('$store.darkMode.on', value => { console.log('Dark Mode is ' + value) })"></div>
+
+    <div class="w-40 h-40 rounded bg-green-900 mt-16" :class='$store.darkMode.on && "bg-black" '></div>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.store('darkMode', {
+                on: false,
+                toggle() {
+                    this.on = ! this.on
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

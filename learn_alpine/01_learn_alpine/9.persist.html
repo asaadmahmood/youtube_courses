@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Events</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <!-- Alpine Persist Plugin -->
+    <script src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Alpine Code -->
+    <script
+        defer
+        src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+</head>
+
+
+<body x-data='{count: $persist(0)}'>
+
+    <div class="grid grid-cols-2">
+        <div>
+            <button class="bg-blue-600 text-white px-4 py-2" @click='$store.darkMode.toggle()' :class='$store.darkMode.on && "bg-purple-800"'>Toggle Dark Mode</button>
+            <div x-init="$watch('$store.darkMode.on', value => { console.log('Dark Mode is ' + value) })"></div>
+            <div class="w-40 h-40 rounded bg-green-900 mt-16 flex items-center justify-center text-white" :class='$store.darkMode.on && "bg-black" ' x-text="$store.darkMode.on"></div>
+        </div>
+        <div>
+            <button class="bg-blue-600 px-2 py-5" x-on:click="count++">Increment</button>
+            <div >
+                <span x-text="count"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.store('darkMode', {
+                on: Alpine.$persist(false).as('darkMode'),
+                toggle() {
+                    this.on = ! this.on
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
