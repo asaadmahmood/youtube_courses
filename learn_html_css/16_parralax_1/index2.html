@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Learn Css Properties</title>
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <!-- Alpine Plugins -->
+    <script
+        defer
+        src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- Alpine Core -->
+    <script
+        defer
+        src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+</head>
+
+<body x-data='{onDiscover: false, scrollPosition: window.pageYOffset}' @scroll.window='scrollPosition = window.pageYOffset'>
+    <header>
+        <div class="container flex items-center justify-between">
+            <a
+                href="#"
+                class='text-3xl font-bold'
+            >Nightsky</a>
+            <ul class='space-x-8 flex items-center font-semibold'>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Experiences</a>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+                <li>
+                    <a href="#">Pricing</a>
+                </li>
+                <li>
+                    <a
+                        class='h-14 rounded-full border flex items-center border-current px-6'
+                        href="#"
+                    >Book a session</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div
+        class='intro-section relative'
+        :style='` background-position: bottom -${scrollPosition/2}px center; `'
+    >
+        <div :style='`transform: translateY(${scrollPosition/4}px)`' class='transition ease-linear'>
+            <div class='intro-section-text'>
+                <h1 class='text-5xl font-bold mb-4'>Explore the Nightsky</h1>
+                <p class='text-xl'>Urna at et nunc arcu faucibus. Egestas scelerisque est orci nullam neque. Odio integer
+                    neque, aenean nibh id accumsan nam.</p>
+            </div>
+        </div>
+        <div class='absolute left-0 flex justify-center bottom-0 w-full'><img
+                src="img/mountain.png"
+                class='mountain -ml-32'
+                alt="Mountain"
+            ></div>
+        <div class='absolute left-0 flex justify-center bottom-0 z-10 w-full pb-8'>
+            <a href="#bottomScreen">
+                <button class='font-semibold flex flex-col justify-center items-center space-y-2 animate-bounce'>
+                    <img
+                        src="img/arrow-down.svg"
+                        alt=""
+                    >
+                    <span>Scroll down</span>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div
+        x-intersect.half='onDiscover = true'
+        id='bottomScreen'
+        class='bottom-section h-screen text-white pt-56'
+    >
+        <div x-show='onDiscover'>
+            <div class='bottom-section-text'>
+                <h1 class='text-5xl font-bold mb-4'>Discover our experiences</h1>
+                <p class='text-xl'>Cursus tortor, nullam nisi, lectus nunc purus mauris. Vulputate nulla etiam mauris amet
+                    nunc, enim tincidunt ornare vitae.</p>
+            </div>
+            <div class="container">
+                <div class='boxes flex items-center justify-between mt-24'>
+                    <div class="location-box">
+                        <img
+                            src="img/box1.png"
+                            alt="Box 1"
+                        >
+                        <div class='text-xl font-semibold mt-5 mb-2'>Midnight Sky</div>
+                        <p class='opacity-60'>Nunc fermentum a placerat lorem. Elit diam nisi.</p>
+                    </div>
+                    <div class="location-box">
+                        <img
+                            src="img/box2.png"
+                            alt="Box 1"
+                        >
+                        <div class='text-xl font-semibold mt-5 mb-2'>Arabian Nights</div>
+                        <p class='opacity-60'>Nunc fermentum a placerat lorem. Elit diam nisi.</p>
+                    </div>
+                    <div class="location-box">
+                        <img
+                            src="img/box3.png"
+                            alt="Box 1"
+                        >
+                        <div class='text-xl font-semibold mt-5 mb-2'>Milkyway galaxy</div>
+                        <p class='opacity-60'>Nunc fermentum a placerat lorem. Elit diam nisi.</p>
+                    </div>
+                    <div class="location-box">
+                        <img
+                            src="img/box4.png"
+                            alt="Box 1"
+                        >
+                        <div class='text-xl font-semibold mt-5 mb-2'>Nightfire Camping</div>
+                        <p class='opacity-60'>Nunc fermentum a placerat lorem. Elit diam nisi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

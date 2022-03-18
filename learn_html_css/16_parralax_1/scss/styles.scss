@@ -5,16 +5,21 @@
 @import 'partials/variables';
 @import 'partials/icons';
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #092554;
     background-image: url(../img/stars.png);
+    background-size: contain;
     font-family: 'Greycliff CF';
 }
 
 .intro-section {
     @apply h-screen flex items-center justify-center text-white overflow-hidden;
     background-image: url(../img/background.jpg);
-    background-position: top center;
+    background-position: bottom center;
     background-size: 140% auto;
     animation: backgroundSize 1s ease-in-out forwards 1s;
 
@@ -51,7 +56,7 @@ body {
 
 .bottom-section-text {
     @apply text-center opacity-0;
-    animation: bottomText 1s ease-in-out forwards 4s;
+    animation: bottomText 1s ease-in-out forwards 0s;
 }
 
 @keyframes introText {
@@ -107,19 +112,19 @@ header {
     opacity: 0;
 
     &:nth-child(1) {
-        animation: locationBox 1s ease-in-out forwards 5s;
+        animation: locationBox 1s ease-in-out forwards 1s;
     }
 
     &:nth-child(2) {
-        animation: locationBox 1s ease-in-out forwards 5.5s;
+        animation: locationBox 1s ease-in-out forwards 1.5s;
     }
 
     &:nth-child(3) {
-        animation: locationBox 1s ease-in-out forwards 6s;
+        animation: locationBox 1s ease-in-out forwards 2s;
     }
 
     &:nth-child(4) {
-        animation: locationBox 1s ease-in-out forwards 6.5s;
+        animation: locationBox 1s ease-in-out forwards 2.5s;
     }
 }
 
